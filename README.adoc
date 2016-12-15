@@ -18,7 +18,6 @@ IterateMap
     * CPU Time Measurement: On
 
                                                user  system   cpu  real
-
     Loop using "for"                            546       0   546   546
     Loop using "for" + CompileStatic            246       0   246   246
     Loop using "each"                          3384       0  3384  3384
