@@ -1,7 +1,25 @@
 # Groovy Performance
 
+
 IterateMap
 ----------
+                                               user  system   cpu  real
+    Loop using "for"                            546       0   546   546
+    Loop using "for" + CompileStatic            246       0   246   246
+    Loop using "each"                          3384       0  3384  3384
+    Loop using "each" + CompileStatic           257       0   257   257
+    Loop using "each" +  k, v                  3198       0  3198  3215
+    Loop using "each" +  k, v + CompileStatic   937       0   937   937
+
+BuildXml
+--------
+                                    user  system    cpu   real
+    Using MarkupBuilder            79150       8  79158  79187
+    Using XmlNodePrinter           30028       0  30028  30028
+    Using XmlNodePrinter + Static  24674       0  24674  24674
+
+Environment
+-----------
 
     Environment
     ===========
@@ -16,13 +34,3 @@ IterateMap
     =======
     * Warm Up: Auto (- 60 sec)
     * CPU Time Measurement: On
-
-                                               user  system   cpu  real
-    Loop using "for"                            546       0   546   546
-    Loop using "for" + CompileStatic            246       0   246   246
-    Loop using "each"                          3384       0  3384  3384
-    Loop using "each" + CompileStatic           257       0   257   257
-    Loop using "each" +  k, v                  3198       0  3198  3215
-    Loop using "each" +  k, v + CompileStatic   937       0   937   937
-
-    Process finished with exit code 0
