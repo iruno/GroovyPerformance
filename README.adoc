@@ -10,7 +10,11 @@ You can find several tests displaying different ways of doing the same job.
 https://github.com/gperfutils/gbench[GBench] benchmarking module for Groovy is used here.
 
 
+RESULTS
+-------
 
+* Do not use Closures
+* Use @CompileStatic
 
 IterateMap
 ----------
