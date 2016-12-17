@@ -155,7 +155,7 @@ class BuildXml {
             'Using XmlNodePrinter' {
                 resultXmlNodePrinter = usingXmlNodePrinter()
             }
-            'Using XmlNodePrinter + Static' {
+            'Using XmlNodePrinter + CompileStatic' {
                 resultXmlNodePrinterWithStatic = usingXmlNodePrinterWithStatic()
             }
         }.prettyPrint()

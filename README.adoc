@@ -1,5 +1,16 @@
 # Groovy Performance
 
+OVERVIEW
+--------
+
+We are trying to make Groovy code faster.
+
+You can find several tests displaying different ways of doing the same job.
+
+https://github.com/gperfutils/gbench[GBench] benchmarking module for Groovy is used here.
+
+
+
 
 IterateMap
 ----------
@@ -17,6 +28,14 @@ BuildXml
     Using MarkupBuilder            79150       8  79158  79187
     Using XmlNodePrinter           30028       0  30028  30028
     Using XmlNodePrinter + Static  24674       0  24674  24674
+
+SwitchVsIf
+----------
+
+                              user  system   cpu  real
+    Using Switch              1832       0  1832  1916
+    Using If                   167       0   167   167
+    Using If + CompileStatic   158       0   158   161
 
 Environment
 -----------
