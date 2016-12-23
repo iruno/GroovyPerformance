@@ -8,7 +8,7 @@ class ParseXml {
 
     static String xmlString = BuildXml.usingXmlNodePrinterWithStatic()
 
-    // Task: find the quantity of 'vanilla sugar'
+    // Task: findDirect the quantity of 'vanilla sugar'
 
     static Integer groovyWay() {
 
