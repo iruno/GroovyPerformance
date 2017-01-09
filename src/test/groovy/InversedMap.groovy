@@ -78,7 +78,7 @@ class InversedMap {
             findDirect {
                 result1 = findDirect(i)
             }
-            getReversed{
+            getReversed {
                 result2 = getReversed(i)
             }
 
@@ -87,5 +87,27 @@ class InversedMap {
         println result1
 
         assert result1 == result2
+    }
+
+    @Test
+    void gpathBenchmark() {
+        Integer result1
+        Integer result2
+
+        String key = 'DEFAULT_QOS_CHANGE'
+
+        benchmark {
+            usingGet {
+                result1 = DICTIONARY.get(key)
+            }
+            usingGpath {
+                result2 = DICTIONARY."$key"
+            }
+
+        }.prettyPrint()
+
+
+        assert result1 == 47
+        assert result2 == 47
     }
 }
