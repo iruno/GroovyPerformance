@@ -67,10 +67,16 @@ class InversedMap {
         DICTIONARY_INVERSED.get(i)
     }
 
+    @CompileStatic
+    static String getReversedEx(Integer i) {
+        (String) DICTIONARY_INVERSED.get(i)
+    }
+
     @Test
     void benchmark() {
         String result1
         String result2
+        String result3
 
         Integer i = 47
 
@@ -82,11 +88,16 @@ class InversedMap {
                 result2 = getReversed(i)
             }
 
+            getReversedEx {
+                result3 = getReversedEx(i)
+            }
+
         }.prettyPrint()
 
         println result1
 
         assert result1 == result2
+        assert result2 == result3
     }
 
     @Test
